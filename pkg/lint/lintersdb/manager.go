@@ -5,13 +5,14 @@ import (
 	"os"
 	"plugin"
 
+	"golang.org/x/tools/go/analysis"
+
 	"github.com/golangci/golangci-lint/pkg/config"
 	"github.com/golangci/golangci-lint/pkg/golinters"
 	"github.com/golangci/golangci-lint/pkg/golinters/goanalysis"
 	"github.com/golangci/golangci-lint/pkg/lint/linter"
 	"github.com/golangci/golangci-lint/pkg/logutils"
 	"github.com/golangci/golangci-lint/pkg/report"
-	"golang.org/x/tools/go/analysis"
 )
 
 type Manager struct {
@@ -207,6 +208,10 @@ func (m Manager) GetAllSupportedLinterConfigs() []*linter.Config {
 			WithPresets(linter.PresetStyle).
 			WithLoadForGoAnalysis().
 			WithURL("https://github.com/denis-tingajkin/go-header"),
+		linter.NewConfig(golinters.NewGci()).
+			WithLoadForGoAnalysis().
+			WithAutoFix().
+			WithURL("https://github.com/daixiang0/gci"),
 		linter.NewConfig(golinters.NewMaligned()).
 			WithLoadForGoAnalysis().
 			WithPresets(linter.PresetPerformance).

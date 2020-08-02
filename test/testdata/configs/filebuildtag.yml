@@ -1,5 +1,5 @@
 linters-settings:
   filebuildtag:
     filetags:
-      - '*_foo.go:foo'
-      - 'filebuildtag_bar.go:bar'
+      - '*_wildcard.go:wildcard'
+      - 'filebuildtag_exact.go:exact'

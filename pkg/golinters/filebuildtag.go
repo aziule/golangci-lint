@@ -2,9 +2,10 @@ package golinters
 
 import (
 	"github.com/aziule/filebuildtag"
+	"golang.org/x/tools/go/analysis"
+
 	"github.com/golangci/golangci-lint/pkg/config"
 	"github.com/golangci/golangci-lint/pkg/golinters/goanalysis"
-	"golang.org/x/tools/go/analysis"
 )
 
 func NewFilebuildtag(settings *config.FilebuildtagSettings) *goanalysis.Linter {
