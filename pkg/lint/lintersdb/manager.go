@@ -5,14 +5,13 @@ import (
 	"os"
 	"plugin"
 
-	"golang.org/x/tools/go/analysis"
-
 	"github.com/golangci/golangci-lint/pkg/config"
 	"github.com/golangci/golangci-lint/pkg/golinters"
 	"github.com/golangci/golangci-lint/pkg/golinters/goanalysis"
 	"github.com/golangci/golangci-lint/pkg/lint/linter"
 	"github.com/golangci/golangci-lint/pkg/logutils"
 	"github.com/golangci/golangci-lint/pkg/report"
+	"golang.org/x/tools/go/analysis"
 )
 
 type Manager struct {
@@ -88,10 +87,12 @@ func (m Manager) GetAllSupportedLinterConfigs() []*linter.Config {
 	var govetCfg *config.GovetSettings
 	var testpackageCfg *config.TestpackageSettings
 	var exhaustiveCfg *config.ExhaustiveSettings
+	var filebuildtagCfg *config.FilebuildtagSettings
 	if m.cfg != nil {
 		govetCfg = &m.cfg.LintersSettings.Govet
 		testpackageCfg = &m.cfg.LintersSettings.Testpackage
 		exhaustiveCfg = &m.cfg.LintersSettings.Exhaustive
+		filebuildtagCfg = &m.cfg.LintersSettings.Filebuildtag
 	}
 	const megacheckName = "megacheck"
 	lcs := []*linter.Config{
@@ -296,6 +297,10 @@ func (m Manager) GetAllSupportedLinterConfigs() []*linter.Config {
 			WithPresets(linter.PresetBugs).
 			WithLoadForGoAnalysis().
 			WithURL("https://github.com/ryanrolds/sqlclosecheck"),
+		linter.NewConfig(golinters.NewFilebuildtag(filebuildtagCfg)).
+			WithPresets(linter.PresetFormatting).
+			WithLoadForGoAnalysis().
+			WithURL("https://github.com/aziule/filebuildtag"),
 		// nolintlint must be last because it looks at the results of all the previous linters for unused nolint directives
 		linter.NewConfig(golinters.NewNoLintLint()).
 			WithPresets(linter.PresetStyle).

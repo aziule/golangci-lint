@@ -228,23 +228,24 @@ type LintersSettings struct {
 		} `mapstructure:"blocked"`
 	}
 
-	WSL         WSLSettings
-	Lll         LllSettings
-	Unparam     UnparamSettings
-	Nakedret    NakedretSettings
-	Prealloc    PreallocSettings
-	Errcheck    ErrcheckSettings
-	Gocritic    GocriticSettings
-	Godox       GodoxSettings
-	Dogsled     DogsledSettings
-	Gocognit    GocognitSettings
-	Godot       GodotSettings
-	Goheader    GoHeaderSettings
-	Testpackage TestpackageSettings
-	Nestif      NestifSettings
-	NoLintLint  NoLintLintSettings
-	Exhaustive  ExhaustiveSettings
-	Gofumpt     GofumptSettings
+	WSL          WSLSettings
+	Lll          LllSettings
+	Unparam      UnparamSettings
+	Nakedret     NakedretSettings
+	Prealloc     PreallocSettings
+	Errcheck     ErrcheckSettings
+	Gocritic     GocriticSettings
+	Godox        GodoxSettings
+	Dogsled      DogsledSettings
+	Gocognit     GocognitSettings
+	Godot        GodotSettings
+	Goheader     GoHeaderSettings
+	Testpackage  TestpackageSettings
+	Nestif       NestifSettings
+	NoLintLint   NoLintLintSettings
+	Exhaustive   ExhaustiveSettings
+	Gofumpt      GofumptSettings
+	Filebuildtag FilebuildtagSettings
 
 	Custom map[string]CustomLinterSettings
 }
@@ -354,6 +355,10 @@ type ExhaustiveSettings struct {
 
 type GofumptSettings struct {
 	ExtraRules bool `mapstructure:"extra-rules"`
+}
+
+type FilebuildtagSettings struct {
+	Filetags []string `mapstructure:"filetags"`
 }
 
 var defaultLintersSettings = LintersSettings{

@@ -106,6 +106,13 @@ linters-settings:
     # 'default' case is present, even if all enum members aren't listed in the
     # switch
     default-signifies-exhaustive: false
+  filebuildtag:
+    # map file name patterns to their expected build tag.
+    filetags:
+      # exact match: files named "foo.go" must have the "foo" tag.
+      - 'foo.go:foo'
+      # wildcard match: files ending with "_bar.go" must have the "bar" tag.
+      - '*_bar.go:bar'
   funlen:
     lines: 60
     statements: 40

@@ -1,0 +1,5 @@
+linters-settings:
+  filebuildtag:
+    filetags:
+      - '*_foo.go:foo'
+      - 'filebuildtag_bar.go:bar'

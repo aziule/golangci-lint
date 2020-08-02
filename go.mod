@@ -5,6 +5,7 @@ go 1.12
 require (
 	github.com/Djarvur/go-err113 v0.0.0-20200511133814-5174e21577d5
 	github.com/OpenPeeDeeP/depguard v1.0.1
+	github.com/aziule/filebuildtag v1.1.0
 	github.com/bombsimon/wsl/v3 v3.1.0
 	github.com/denis-tingajkin/go-header v0.3.1
 	github.com/fatih/color v1.9.0
@@ -56,7 +57,7 @@ require (
 	github.com/ultraware/whitespace v0.0.4
 	github.com/uudashr/gocognit v1.0.1
 	github.com/valyala/quicktemplate v1.5.1
-	golang.org/x/tools v0.0.0-20200710042808-f1c4188a97a1
+	golang.org/x/tools v0.0.0-20200731060945-b5fad4ed8dd6
 	gopkg.in/yaml.v2 v2.3.0
 	honnef.co/go/tools v0.0.1-2020.1.4
 	mvdan.cc/gofumpt v0.0.0-20200709182408-4fd085cb6d5f
@@ -64,3 +65,5 @@ require (
 	mvdan.cc/lint v0.0.0-20170908181259-adc824a0674b // indirect
 	mvdan.cc/unparam v0.0.0-20190720180237-d51796306d8f
 )
+
+replace github.com/aziule/filebuildtag => ../filebuildtag
