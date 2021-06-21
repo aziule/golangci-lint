@@ -7,7 +7,7 @@ require (
 	github.com/OpenPeeDeeP/depguard v1.0.1
 	github.com/bombsimon/wsl/v3 v3.1.0
 	github.com/denis-tingajkin/go-header v0.3.1
-	github.com/fatih/color v1.9.0
+	github.com/fatih/color v1.10.0
 	github.com/go-critic/go-critic v0.5.0
 	github.com/go-xmlfmt/xmlfmt v0.0.0-20191208150333-d5b6f63a941b
 	github.com/gofrs/flock v0.7.1
@@ -30,7 +30,7 @@ require (
 	github.com/kyoh86/exportloopref v0.1.7
 	github.com/maratori/testpackage v1.0.1
 	github.com/matoous/godox v0.0.0-20190911065817-5d6d842e92eb // v1.0
-	github.com/mattn/go-colorable v0.1.7
+	github.com/mattn/go-colorable v0.1.8
 	github.com/mitchellh/go-homedir v1.1.0
 	github.com/mitchellh/go-ps v1.0.0
 	github.com/nakabonne/nestif v0.3.0
@@ -38,10 +38,10 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/ryancurrah/gomodguard v1.1.0
 	github.com/ryanrolds/sqlclosecheck v0.3.0
-	github.com/securego/gosec/v2 v2.3.0
+	github.com/securego/gosec/v2 v2.8.1
 	github.com/shazow/go-diff v0.0.0-20160112020656-b6b7b6733b8c
 	github.com/shirou/gopsutil v0.0.0-20190901111213-e4ec7b275ada // v2.19.8
-	github.com/sirupsen/logrus v1.6.0
+	github.com/sirupsen/logrus v1.7.0
 	github.com/sonatard/noctx v0.0.1
 	github.com/sourcegraph/go-diff v0.5.3
 	github.com/spf13/cobra v1.0.0
@@ -56,8 +56,8 @@ require (
 	github.com/ultraware/whitespace v0.0.4
 	github.com/uudashr/gocognit v1.0.1
 	github.com/valyala/quicktemplate v1.5.1
-	golang.org/x/tools v0.0.0-20200710042808-f1c4188a97a1
-	gopkg.in/yaml.v2 v2.3.0
+	golang.org/x/tools v0.1.3
+	gopkg.in/yaml.v2 v2.4.0
 	honnef.co/go/tools v0.0.1-2020.1.4
 	mvdan.cc/gofumpt v0.0.0-20200709182408-4fd085cb6d5f
 	mvdan.cc/interfacer v0.0.0-20180901003855-c20040233aed
