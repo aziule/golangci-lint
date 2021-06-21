@@ -46,8 +46,8 @@ require (
 	github.com/sourcegraph/go-diff v0.5.3
 	github.com/spf13/cobra v1.0.0
 	github.com/spf13/pflag v1.0.5
-	github.com/spf13/viper v1.7.0
-	github.com/stretchr/testify v1.6.1
+	github.com/spf13/viper v1.8.0
+	github.com/stretchr/testify v1.7.0
 	github.com/tdakkota/asciicheck v0.0.0-20200416190851-d7f85be797a2
 	github.com/tetafro/godot v0.4.8
 	github.com/timakin/bodyclose v0.0.0-20190930140734-f7f2e9bca95e
@@ -56,8 +56,8 @@ require (
 	github.com/ultraware/whitespace v0.0.4
 	github.com/uudashr/gocognit v1.0.1
 	github.com/valyala/quicktemplate v1.5.1
-	golang.org/x/tools v0.0.0-20200710042808-f1c4188a97a1
-	gopkg.in/yaml.v2 v2.3.0
+	golang.org/x/tools v0.1.2
+	gopkg.in/yaml.v2 v2.4.0
 	honnef.co/go/tools v0.0.1-2020.1.4
 	mvdan.cc/gofumpt v0.0.0-20200709182408-4fd085cb6d5f
 	mvdan.cc/interfacer v0.0.0-20180901003855-c20040233aed
